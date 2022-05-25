@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Express and MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ."
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "json-pointer": "^0.6.2",
+    "jsonpath": "^1.1.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.3.4"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "jest-junit": "^13.2.0",
+    "supertest": "^3.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  }
+}

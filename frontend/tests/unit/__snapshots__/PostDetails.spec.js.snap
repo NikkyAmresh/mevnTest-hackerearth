@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostDetails.vue renders props.post when passed for non-published posts 1`] = `"PostTitle: xyzDescription: AbcStatus: Pending"`;
+
+exports[`PostDetails.vue renders props.post when passed for published posts 1`] = `"PostTitle: abcDescription: xyzStatus: Published"`;

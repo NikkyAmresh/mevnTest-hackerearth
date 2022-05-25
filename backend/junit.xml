@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="8" failures="0" errors="0" time="0.705">
+  <testsuite name="POST /api/posts" errors="0" failures="0" skipped="0" timestamp="2022-05-25T09:17:58" time="0.678" tests="8">
+    <testcase classname="POST /api/posts It should create a new post" name="POST /api/posts It should create a new post" time="0.121">
+    </testcase>
+    <testcase classname="POST /api/posts It should create another new post" name="POST /api/posts It should create another new post" time="0.006">
+    </testcase>
+    <testcase classname="GET /api/posts It should respond with an array of posts" name="GET /api/posts It should respond with an array of posts" time="0.029">
+    </testcase>
+    <testcase classname="GET /api/posts/:id It should return new post" name="GET /api/posts/:id It should return new post" time="0.01">
+    </testcase>
+    <testcase classname="PUT /api/posts/:id It should update the post" name="PUT /api/posts/:id It should update the post" time="0.016">
+    </testcase>
+    <testcase classname="DELETE /api/posts/:id It should delete the post" name="DELETE /api/posts/:id It should delete the post" time="0.004">
+    </testcase>
+    <testcase classname="DELETE /api/posts/:id It should delete all posts" name="DELETE /api/posts/:id It should delete all posts" time="0.005">
+    </testcase>
+    <testcase classname="Test a 404 It should respond with a 404 status" name="Test a 404 It should respond with a 404 status" time="0.002">
+    </testcase>
+  </testsuite>
+</testsuites>

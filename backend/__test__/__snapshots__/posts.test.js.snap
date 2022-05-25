@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DELETE /api/posts/:id It should delete all posts 1`] = `
+Object {
+  "message": "1 Posts were deleted successfully!",
+}
+`;
+
+exports[`DELETE /api/posts/:id It should delete the post 1`] = `
+Object {
+  "message": "Post was deleted successfully!",
+}
+`;
+
+exports[`GET /api/posts It should respond with an array of posts 1`] = `
+Array [
+  Object {
+    "description": "test description",
+    "published": false,
+    "title": "test title",
+  },
+  Object {
+    "description": "test another description",
+    "published": false,
+    "title": "test another title",
+  },
+]
+`;
+
+exports[`GET /api/posts/:id It should return new post 1`] = `
+Object {
+  "description": "test description",
+  "published": false,
+  "title": "test title",
+}
+`;
+
+exports[`POST /api/posts It should create a new post 1`] = `
+Object {
+  "description": "test description",
+  "published": false,
+  "title": "test title",
+}
+`;
+
+exports[`POST /api/posts It should create another new post 1`] = `
+Object {
+  "description": "test another description",
+  "published": false,
+  "title": "test another title",
+}
+`;
+
+exports[`PUT /api/posts/:id It should update the post 1`] = `
+Object {
+  "message": "Post was updated successfully.",
+}
+`;
+
+exports[`Test a 404 It should respond with a 404 status 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+<head>
+<meta charset=\\"utf-8\\">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /nowhere</pre>
+</body>
+</html>
+"
+`;
