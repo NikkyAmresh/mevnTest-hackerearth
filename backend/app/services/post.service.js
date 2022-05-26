@@ -3,98 +3,48 @@ const postModel = db.posts;
 const { AppError } = require("../helpers/AppError");
 const PostServices = {
   create: async (postData) => {
-    if (!postData.title) {
-      throw new AppError(400, "Content can not be empty!");
-    }
-    const post = new postModel({
-      title: postData.title,
-      description: postData.description,
-      published: postData.published ? postData.published : false,
-    });
+    /* create a post using the postData  which contain {title,description,published}
+    where title is mandatory otherwise throw an 400 AppError as "Content can not be empty!"*/
 
-    await post.save().catch((err) => {
-      throw new AppError(
-        500,
-        err.message || "Some error occurred while creating the Post."
-      );
-    });
+    let post;
+
+    /* for other kinds of error throw 500 AppError as message "Some error occurred while creating the Post." */
+
     return post;
   },
   getAll: async (title) => {
-    let condition = title
-      ? { title: { $regex: new RegExp(title), $options: "i" } }
-      : {};
-
-    const posts = await postModel.find(condition).catch((err) => {
-      throw new AppError(
-        500,
-        err.message || "Some error occurred while retrieving posts."
-      );
-    });
+    /* get all posts from database and return  */
+    // add filter to search wi if title is not empty
+    /* for error throw 500 AppError as message "Some error occurred while retrieving posts." */
+    let posts;
     return posts;
   },
   get: async (id) => {
-    const post = await postModel.findById(id).catch((err) => {
-      throw new AppError(
-        500,
-        err.message || "Error retrieving Post with id=" + id
-      );
-    });
-    if (!post) {
-      throw new AppError(404, "Not found Post with id " + id);
-    }
+    /* get the post from the database with id */
+    /* if any error occurred while  retriving the post Throw AppError 500 as  "Error retrieving Post with id=" + id  */
+    /* throw AppError 404 if post not fonud as message "Not found Post with id " + id*/
+    /* else return as {message :"Post was deleted successfully!"} */
+
     return post;
   },
   update: async (id, post) => {
-    if (!post) {
-      throw new AppError(400, "Data to update can not be empty!");
-    }
-
-    const updated = await postModel
-      .findByIdAndUpdate(id, post, { useFindAndModify: false })
-      .catch((err) => {
-        throw new AppError(
-          500,
-          err.message || "Error updating Post with id=" + id
-        );
-      });
-
-    if (!updated) {
-      throw new AppError(
-        404,
-        `Cannot update Post with id=${id}. Maybe Post was not found!`
-      );
-    } else return { message: "Post was updated successfully." };
+    /* update post with id {title,description,published} */
+    /* if variable post is null throw AppError 400 as "Data to update can not be empty!" */
+    /* if error while updating post then throw AppError 500 as "Error updating Post with id=" + id */
+    /* if post not found throw AppError 404 "Cannot update Post with id=${id}. Maybe Post was not found!"*/
+    /*
+    else return { message: "Post was updated successfully." };
+    /*
   },
   delete: async (id) => {
-    const deleted = await postModel
-      .findByIdAndRemove(id, { useFindAndModify: false })
-
-      .catch((err) => {
-        throw new AppError(
-          500,
-          err.message || "Could not delete Post with id=" + id
-        );
-      });
-
-    if (!deleted) {
-      throw new AppError(
-        404,
-        `Cannot delete Post with id=${id}. Maybe Post was not found!`
-      );
-    } else {
-      return {
-        message: "Post was deleted successfully!",
-      };
-    }
+    /* delet the post from the database with id */
+    /* if any error occurred while  deleting the post Throw AppError 500 as  "Could not delete Post with id=" + id  */
+    /* else return as {message :"Post was deleted successfully!"} */
   },
   deleteAll: async () => {
-    const deleted = await postModel.deleteMany({}).catch((err) => {
-      throw new AppError(
-        500,
-        err.message || "Some error occurred while removing all posts."
-      );
-    });
+    /* delete all posts from  the database and return as "${deleted.deletedCount} Posts were deleted successfully!" */
+
+    /* for any kind of error, throw AppError 500 as message "Some error occurred while removing all posts." */
 
     return {
       message: `${deleted.deletedCount} Posts were deleted successfully!`,
