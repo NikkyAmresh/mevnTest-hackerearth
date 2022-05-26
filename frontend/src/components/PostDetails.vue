@@ -1,3 +1,7 @@
+/* Post Title: This is the sample Title Description: This is the sample
+Description Status: Published */ /* Post Title: This is the sample Title
+Description: This is the sample Description Status: Pending */
+
 <template>
   <div v-if="post">
     <h4>Post</h4>
