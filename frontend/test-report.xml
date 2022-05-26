@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite id="0" name="/Users/nikkyamresh/Downloads/Test/frontend/tests/unit/PostDetails.spec.js" errors="0" package="/Users/nikkyamresh/Downloads/Test/frontend/tests/unit/PostDetails.spec.js" hostname="localhost" tests="2" failures="0" time="0.908" timestamp="2022-05-26T13:32:35">
+  <testsuite id="0" name="/Users/nikkyamresh/Downloads/Test/frontend/tests/unit/PostDetails.spec.js" errors="0" package="/Users/nikkyamresh/Downloads/Test/frontend/tests/unit/PostDetails.spec.js" hostname="localhost" tests="2" failures="2" time="0.951" timestamp="2022-05-26T15:54:00">
     <properties>
     </properties>
     <testcase classname="PostDetails.vue" name="renders props.post when passed for non-published posts" time="0">
+      <failure message="Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoMatchSnapshot[2m()[22m
+
+Snapshot name: `PostDetails.vue renders props.post when passed for non-published posts 1`
+
+Snapshot: [32m&quot;PostTitle: [7mxyzDescription: AbcStatus: Pending[27m&quot;[39m
+Received: [31m&quot;PostTitle: [7m // Title here Description: // Description here Status: // Status here -&gt; Pending/Published[27m&quot;[39m
+    at Object.&lt;anonymous&gt; (/Users/nikkyamresh/Downloads/Test/frontend/tests/unit/PostDetails.spec.js:12:28)
+    at Object.asyncJestTest (/Users/nikkyamresh/Downloads/Test/frontend/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/nikkyamresh/Downloads/Test/frontend/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/nikkyamresh/Downloads/Test/frontend/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/nikkyamresh/Downloads/Test/frontend/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)" type="AssertionError">
+      </failure>
     </testcase>
     <testcase classname="PostDetails.vue" name="renders props.post when passed for published posts" time="0">
+      <failure message="Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoMatchSnapshot[2m()[22m
+
+Snapshot name: `PostDetails.vue renders props.post when passed for published posts 1`
+
+Snapshot: [32m&quot;PostTitle: [7mabcDescription: xyzStatus: [27mPublished&quot;[39m
+Received: [31m&quot;PostTitle: [7m // Title here Description: // Description here Status: // Status here -&gt; Pending/[27mPublished&quot;[39m
+    at Object.&lt;anonymous&gt; (/Users/nikkyamresh/Downloads/Test/frontend/tests/unit/PostDetails.spec.js:25:28)
+    at Object.asyncJestTest (/Users/nikkyamresh/Downloads/Test/frontend/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/nikkyamresh/Downloads/Test/frontend/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/nikkyamresh/Downloads/Test/frontend/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/nikkyamresh/Downloads/Test/frontend/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)" type="AssertionError">
+      </failure>
     </testcase>
     <system-out/>
     <system-err/>

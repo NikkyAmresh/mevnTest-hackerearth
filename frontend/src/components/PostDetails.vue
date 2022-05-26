@@ -1,20 +1,19 @@
-/* Post Title: This is the sample Title Description: This is the sample
-Description Status: Published */ /* Post Title: This is the sample Title
-Description: This is the sample Description Status: Pending */
-
+/* *** Post Title: This is the sample Title Description: This is the sample
+Description Status: Published | Pending */
 <template>
   <div v-if="post">
     <h4>Post</h4>
     <div>
-      <label><strong>Title:</strong></label> {{ post.title }}
+      <label><strong>Title: </strong></label>
+      // Title here
     </div>
     <div>
       <label><strong>Description:</strong></label>
-      {{ post.description }}
+      // Description here
     </div>
     <div>
       <label><strong>Status:</strong></label>
-      {{ post.published ? "Published" : "Pending" }}
+      // Status here -> Pending/Published
     </div>
   </div>
 </template>

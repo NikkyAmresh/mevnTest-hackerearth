@@ -3,5 +3,6 @@ module.exports = {
     port: 8000,
     disableHostCheck: true,
     baseUrl: "./",
+    publicPath: "./",
   },
 };
