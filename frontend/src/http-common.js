@@ -1,7 +1,7 @@
 import axios from "axios";
 import toast from "./helper/Toast";
 const instance = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: `https://he-ide.hackerearth.com/${process.env.REACT_APP_HASH}.backend/`,
   headers: {
     "Content-type": "application/json",
   },
