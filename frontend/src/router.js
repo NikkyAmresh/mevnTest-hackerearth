@@ -2,18 +2,18 @@ import { createWebHistory, createRouter } from "vue-router";
 
 const routes = [
   {
-    path: "/",
+    path: `/${process.env.REACT_APP_HASH}/`,
     alias: "/posts",
     name: "posts",
     component: () => import("./components/PostsList"),
   },
   {
-    path: "/posts/:id",
+    path: `/${process.env.REACT_APP_HASH}/posts/:id`,
     name: "post-details",
     component: () => import("./components/Post"),
   },
   {
-    path: "/add",
+    path: `/${process.env.REACT_APP_HASH}/add`,
     name: "add",
     component: () => import("./components/AddPost"),
   },
