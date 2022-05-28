@@ -2,7 +2,7 @@ module.exports = {
   devServer: {
     port: 8000,
     disableHostCheck: true,
-    baseUrl: "./",
-    publicPath: "./",
+    transpileDependencies: true,
   },
+  publicPath: `/${process.env.REACT_APP_HASH}/`,
 };

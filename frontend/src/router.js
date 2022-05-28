@@ -1,5 +1,9 @@
 import { createWebHistory, createRouter } from "vue-router";
 
+// import * as VueRouter from "vue-router";
+// import Vue from "vue";
+// Vue.use(VueRouter);
+
 const routes = [
   {
     path: "/",
@@ -20,8 +24,16 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(`/${process.env.REACT_APP_HASH}/`),
   routes,
 });
+
+// console.log({ test: `/${process.env.REACT_APP_HASH}/` });
+
+// const router = new VueRouter({
+//   mode: "history",
+//   base: "/dist/",
+//   routes,
+// });
 
 export default router;
