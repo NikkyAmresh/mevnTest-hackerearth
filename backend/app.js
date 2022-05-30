@@ -27,6 +27,10 @@ db.mongoose
     process.exit();
   });
 
+app.all("*", (_, res) => {
+  res.status(204).send(null);
+});
+
 require("./app/routes/post.routes")(app);
 
 module.exports = app;
