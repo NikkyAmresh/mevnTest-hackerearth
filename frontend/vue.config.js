@@ -4,5 +4,5 @@ module.exports = {
     disableHostCheck: true,
     transpileDependencies: true,
   },
-  publicPath: `/${process.env.REACT_APP_HASH}/`,
+  publicPath: `/${process.env.VUE_APP_HASH}/`,
 };
